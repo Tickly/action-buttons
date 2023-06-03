@@ -27,6 +27,12 @@
       "scripthost"
     ]
   },
+  "vueCompilerOptions": {
+    "target": 2.7,
+    "extensions": [
+      ".vue"
+    ]
+  },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
