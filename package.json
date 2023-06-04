@@ -1,11 +1,10 @@
 {
-  "name": "action-buttons",
+  "name": "vue-antd-action-buttons",
   "version": "0.1.0",
-  "private": true,
-  "main":"dist/ActionButtons.umd.js",
+  "main": "dist/ActionButtons.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --report --target lib --name ActionButtons ./src/lib.ts",
+    "build": "vue-cli-service build --report --target lib  ./src/lib.ts",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
