@@ -12,8 +12,18 @@ interface ActionButtonsColumnConfig<T> {
 }
 
 export declare interface ActionButtonsConfig<T> extends Column {
-  limit: number;
-  showDivider: boolean;
+  /**
+   * 设置一个数量，超过该数量，则展示【更多】下拉按钮。
+   * 默认 0，表示按钮将全部展示
+   */
+  limit?: number;
+  /**
+   * 是否展示分隔符，默认展示
+   */
+  showDivider?: boolean;
+  /**
+   * 要展示的按钮数组
+   */
   buttons: Array<ActionButtonsColumnConfig<T>>;
 }
 
