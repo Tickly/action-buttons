@@ -17,7 +17,7 @@ export declare interface ActionButtonsConfig<T> extends Column {
   buttons: Array<ActionButtonsColumnConfig<T>>;
 }
 
-export const useActionButtons = <T,>(
+export const useActionButtons = <T>(
   // vm: InstanceType<VueConstructor>,
   config: ActionButtonsConfig<T>
 ): Column => {
