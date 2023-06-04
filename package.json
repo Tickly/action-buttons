@@ -1,6 +1,6 @@
 {
   "name": "vue-antd-action-buttons",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/ActionButtons.umd.js",
   "typings": "dist/lib.d.ts",
   "scripts": {
