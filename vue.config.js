@@ -1,9 +1,19 @@
 const { defineConfig } = require('@vue/cli-service');
 module.exports = defineConfig({
   transpileDependencies: true,
-  // configureWebpack: {
-  //   externals: {
-  //     antd: 'ant-design-vue',
-  //   },
-  // },
+  chainWebpack: (config) => {
+    if (process.env.NODE_ENV === 'production') {
+      config.module.rule('ts').uses.delete('cache-loader');
+      config.module
+        .rule('ts')
+        .use('ts-loader')
+        .loader('ts-loader')
+        .tap((options) => ({
+          ...options,
+          transpileOnly: false,
+          happyPackMode: false,
+        }));
+    }
+  },
+  parallel: false,
 });
