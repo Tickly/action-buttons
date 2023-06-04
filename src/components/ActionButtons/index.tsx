@@ -2,6 +2,11 @@ import Vue, { CreateElement, PropType, VNode } from 'vue';
 
 export interface ButtonConfig {
   /**
+   * 设置按钮类型，参考Button的type
+   * 默认为 'link'
+   */
+  type?: string;
+  /**
    * 按钮文本，支持动态获取
    */
   text: string | (() => string);
@@ -103,7 +108,7 @@ export default Vue.extend({
         'a-button',
         {
           props: {
-            type: 'link',
+            type: button.type || 'link',
             size: this.size,
             icon: button.icon,
             disabled: button.disabled ? button.disabled() : false,

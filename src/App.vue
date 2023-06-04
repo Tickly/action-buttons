@@ -46,8 +46,8 @@ export default Vue.extend({
         useActionButtons<MyData>({
           align: 'center',
           title: '操作',
-          limit: 3,
-          showDivider: false,
+          limit: 4,
+          showDivider: true,
           buttons: [
             { icon: 'search', text: '查看' },
             { icon: 'edit', text: '编辑' },

@@ -4,6 +4,11 @@ import { VueConstructor, h } from 'vue';
 type Column = Record<string, any>;
 
 interface ActionButtonsColumnConfig<T> {
+  /**
+   * 设置按钮类型，参考Button的type
+   * 默认为 'link'
+   */
+  type?: string;
   icon?: string;
   text?: string | ((record: T, index: number) => string);
   visible?: (record: T, index: number) => boolean;
@@ -64,6 +69,8 @@ export const useActionButtons = <T>(
     },
   } as Column;
 };
+
+export { ActionButtons };
 
 export default {
   install(Vue: VueConstructor): void {
